@@ -20,17 +20,17 @@
         <br>
         <table class= "table table-bordered">
             <tr>
-                <th class="text-center">Name</th>
-                <th class="text-center">Retailer</th>
-                <th class="text-center">Price</th>
-                <th class="text-center">Discount</th>
+                <th class="text-center col-4">Name</th>
+                <th class="text-center col-4">Retailer</th>
+                <th class="text-center col-4">Price</th>
+                <th class="text-center col-4">Discount</th>
             </tr>
             <% for(let count=0; count<giftlist.length; count++) { %>
                 <tr>
-                    <td class="text-center"><%= giftlist[count].name %></td>
-                    <td class="text-center"><%= giftlist[count].retailer %></td>
-                    <td class="text-center"><%= giftlist[count].price %></td>
-                    <td class="text-center"><%= giftlist[count].discount %></td>
+                    <td class="text-center col-4"><%= giftlist[count].name %></td>
+                    <td class="text-center col-4"><%= giftlist[count].retailer %></td>
+                    <td class="text-center col-4"><%= giftlist[count].price %></td>
+                    <td class="text-center col-4"><%= giftlist[count].discount %></td>
                 </tr>
             <% } %>
         </table>
