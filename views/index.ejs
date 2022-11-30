@@ -9,10 +9,18 @@
   <link rel='stylesheet' href='/Content/app.css' />
 </head>
 
-<body>
-  <h1><%= title %></h1>
-    <p>Add or Update your xmas gift wishlist!</p>
-    
-    <script src = "/Scripts/app.js"></script>
-</body>
+<main>
+  
+</div>
+<% if (title == 'Home') { %>
+    <%- include home.ejs %>
+<% } %>
+
+<% if (title == 'Gift Wishlist') { %>
+    <%- include gifts.ejs %>
+<% } %>
+</div>
+
+</main>
+
 </html>
