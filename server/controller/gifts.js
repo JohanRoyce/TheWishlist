@@ -40,7 +40,7 @@ module.exports.processAddPage = (req,res,next)=>{
         }
         else
         {
-            res.redirect('/gifts/gifts');
+            res.redirect('/gift-list');
         }
     });
 };
@@ -77,7 +77,7 @@ module.exports.processEditPage = (req,res,next)=>{
         }
         else
         {
-            res.redirect('/gifts/gifts');
+            res.redirect('/gift-list');
         }
     });
 };
@@ -92,7 +92,7 @@ module.exports.performDelete = (req,res,next)=>{
         }
         else
         {
-            res.redirect('/gifts/gifts');
+            res.redirect('/gift-list');
         }
     });
 };
