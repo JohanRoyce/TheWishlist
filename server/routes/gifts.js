@@ -1,16 +1,16 @@
 let express = require('express');
 let router = express.Router();
 let mongoose = require('mongoose');
-const gifts = require('../models/gifts');
 
 
+let gifts = require('../models/gifts');
 let giftsController = require('../controller/gifts');
 
 router.get('/',giftsController.displayGiftList);
 
 /*Create*/
 router.get('/add',giftsController.displayAddPage);
-router.post('/post',giftsController.processAddPage);
+router.post('/add',giftsController.processAddPage);
 
 /*Edit*/
 router.get('/edit/:id',giftsController.displayEditPage);
