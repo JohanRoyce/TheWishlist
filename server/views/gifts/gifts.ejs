@@ -13,30 +13,24 @@
   <h1><%= title %></h1>
     <p>Add or Update your xmas gift wishlist!</p>
 
-    <div class ="container">
+    <main class ="container">
         <div class="row">
-        <div class="col-md-offset-3 col-md-10">
+        <div class="col-md-offset-3 col-md-16">
         <h3><%= title %></h3>
-        <a href = "/gift-list/add" class="btn btn-primary" role="button">
-            <i class="fas fa-plus-cirle"></i> Add a gift </a>
         <br>
-        <br>
-
-        <table class= "table table-bordered">
-            <tr>
-                <th class="text-center col-1">Name</th>
-                <th class="text-center col-1">Retailer</th>
-                <th class="text-center col-1">Price</th>
-                <th class="text-center col-1">Discount</th>
-                <th class="text-center col-1">Edit</th>
-                <th class="text-center col-1">Delete</th>
+        <table class= "table table-bordered table-striped table-hover">
+            <tr class="d-flex">
+                <th class="text-center col-4">Name</th>
+                <th class="text-center col-4">Retailer</th>
+                <th class="text-center col-4">Price</th>
+                <th class="text-center col-4">Discount</th>
             </tr>
             <% for(let count=0; count<giftlist.length; count++) { %>
-                <tr>
-                    <td class="text-center col-1"><%= giftlist[count].name %></td>
-                    <td class="text-center col-1"><%= giftlist[count].retailer %></td>
-                    <td class="text-center col-1"><%= giftlist[count].price %></td>
-                    <td class="text-center col-1"><%= giftlist[count].discount %></td>
+                <tr class="d-flex">
+                    <td class="text-center col-4"><%= giftlist[count].name %></td>
+                    <td class="text-center col-4"><%= giftlist[count].retailer %></td>
+                    <td class="text-center col-4"><%= giftlist[count].price %></td>
+                    <td class="text-center col-4"><%= giftlist[count].discount %></td>
                     <td class="text-center col-1">
                         <a href="/gift-list/edit/<%= giftlist[count].id %>"
                             class="btn btn-primary"
@@ -52,8 +46,9 @@
         </table>
         </div>
         </div>
-    </div>
-    
+    </main>
+
     <script src = "/Scripts/app.js"></script>
+    
 </body>
 </html>

@@ -13,7 +13,7 @@ module.exports.displayGiftList = (req,res,next)=>{
         }
         else
         {
-            res.render('gifts/list',{
+            res.render('gifts/gifts',{
                 title:'Gift List', 
                 giftlist: giftlist})
         }
@@ -40,7 +40,7 @@ module.exports.processAddPage = (req,res,next)=>{
         }
         else
         {
-            res.redirect('/gifts/lists');
+            res.redirect('/gifts/gifts');
         }
     });
 };
@@ -77,7 +77,7 @@ module.exports.processEditPage = (req,res,next)=>{
         }
         else
         {
-            res.redirect('/gifts/lists');
+            res.redirect('/gifts/gifts');
         }
     });
 };
@@ -92,7 +92,7 @@ module.exports.performDelete = (req,res,next)=>{
         }
         else
         {
-            res.redirect('/gifts/lists');
+            res.redirect('/gifts/gifts');
         }
     });
 };
