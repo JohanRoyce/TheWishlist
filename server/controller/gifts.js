@@ -62,8 +62,8 @@ module.exports.displayEditPage = (req,res,next)=>{
 
 module.exports.processEditPage = (req,res,next)=>{
     let id=req.params.id;
-    let updateGift= gifts({
-        "id":id,
+    let updateGift= gifts ({
+        "_id":id,
         "name":req.body.name,
         "retailer":req.body.retailer,
         "price":req.body.price,
