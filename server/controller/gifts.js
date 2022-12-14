@@ -15,14 +15,18 @@ module.exports.displayGiftList = (req,res,next)=>{
         {
             res.render('gifts/gifts',{
                 title:'Gift List', 
-                giftlist: giftlist})
+                giftlist: giftlist,
+                displayName: req.user ? req.user.displayName:''
+            })
         }
     });
 };
 
 module.exports.displayAddPage = (req,res,next)=>{
     res.render('gifts/add',{
-        title: 'Add Gift'})
+        title: 'Add Gift',
+        displayName: req.user ? req.user.displayName:''
+    })
 };
 
 module.exports.processAddPage = (req,res,next)=>{
@@ -55,7 +59,9 @@ module.exports.displayEditPage = (req,res,next)=>{
         }
         else
         {
-            res.render('gifts/edit',{title:'Edit item', gifts:giftToEdit});
+            res.render('gifts/edit',{title:'Edit item', 
+            gifts:giftToEdit,
+            displayName: req.user ? req.user.displayName:''});
         }
     });
 };
